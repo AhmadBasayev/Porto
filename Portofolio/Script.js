@@ -4,7 +4,7 @@
   const $ = (sel, root = document) => root.querySelector(sel);
   const $$ = (sel, root = document) => [...root.querySelectorAll(sel)];
 
-  /* Jalankan tiap fitur secara terpisah supaya satu error tidak mematikan yang lain */
+  
   const run = (name, fn) => {
     try { fn(); } catch (err) { console.error('[portfolio] ' + name + ' gagal:', err); }
   };
@@ -14,7 +14,7 @@
   const menu = $('#navMenu');
   const toTop = $('#toTop');
 
-  /* Menu mobile (dipakai juga oleh fitur lain, jadi didefinisikan di luar) */
+
   const setMenu = (open) => {
     if (!menu || !menuBtn) return;
     menu.classList.toggle('open', open);
@@ -23,7 +23,7 @@
     menuBtn.setAttribute('aria-label', open ? 'Tutup menu' : 'Buka menu');
   };
 
-  /* 1. Navbar saat scroll + tombol back to top */
+ 
   run('scroll', () => {
     const onScroll = () => {
       if (header) header.classList.toggle('scrolled', window.scrollY > 40);
@@ -34,7 +34,7 @@
     if (toTop) toTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
   });
 
-  /* 2. Hamburger menu */
+  
   run('menu', () => {
     if (!menu || !menuBtn) return;
     menuBtn.addEventListener('click', () => setMenu(!menu.classList.contains('open')));
@@ -42,7 +42,6 @@
     window.addEventListener('resize', () => { if (window.innerWidth > 820) setMenu(false); });
   });
 
-  /* 3. Indikator menu aktif */
   run('nav-active', () => {
     if (!menu || !('IntersectionObserver' in window)) return;
     const links = $$('a[href^="#"]', menu);
@@ -60,7 +59,6 @@
     });
   });
 
-  /* 4. Scroll reveal (class "js" hanya dipasang kalau fitur ini siap) */
   run('reveal', () => {
     const items = $$('.reveal');
     if (!('IntersectionObserver' in window)) return;
@@ -73,7 +71,7 @@
     items.forEach(el => io.observe(el));
   });
 
-  /* 5. Filter skills */
+  
   run('skills-filter', () => {
     const chips = $$('.chip');
     const rows = $$('.skill-list li');
@@ -109,7 +107,7 @@
     apply('all');
   });
 
-  /* 6. Lightbox */
+
   run('lightbox', () => {
     const lb = $('#lightbox');
     const lbImg = $('#lbImg');
@@ -145,7 +143,6 @@
     });
   });
 
-  /* 7. Tahun otomatis di footer */
   run('year', () => {
     const yr = $('#year');
     if (yr) yr.textContent = new Date().getFullYear();

@@ -1,12 +1,12 @@
-/* ===== Variables (ganti warna di sini) ===== */
+/*ganti warna di sini) */
 :root{
-  --text:#eceff4;       /* teks utama */
-  --muted:#9aa3b2;      /* teks sekunder */
-  --paper:#0f1115;      /* latar halaman */
-  --alt:#151920;        /* latar section selang-seling */
-  --card:#1b2029;       /* kartu & panel */
-  --accent:#f5c518;     /* kuning aksen */
-  --on-accent:#14161a;  /* teks di atas warna kuning */
+  --text:#eceff4;       
+  --muted:#9aa3b2;      
+  --paper:#0f1115;      
+  --alt:#151920;       
+  --card:#1b2029;      
+  --accent:#f5c518;     
+  --on-accent:#14161a;  
   --line:#2a303b;
   --font:"DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
   --serif:"Newsreader",Georgia,serif;
@@ -29,7 +29,7 @@ svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.7;stroke
 .narrow{width:min(720px,100% - 2.5rem)}
 .center{text-align:center}
 
-/* ===== Navbar ===== */
+/* Navbar */
 .site-header{position:fixed;top:0;left:0;right:0;width:100%;height:var(--nav-h);z-index:1000;background:rgba(15,17,21,.96);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
 .nav{height:100%;display:flex;align-items:center;justify-content:space-between}
 .brand{font-family:var(--serif);font-size:1.2rem;font-weight:600}
@@ -44,14 +44,14 @@ svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.7;stroke
 .menu-btn.open span:nth-child(2){opacity:0}
 .menu-btn.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
 
-/* ===== Buttons ===== */
+/*  Buttons  */
 .btn{display:inline-block;padding:.85rem 1.5rem;border-radius:8px;font-weight:500;font-size:.95rem;border:1.5px solid var(--text);transition:background .2s,color .2s,border-color .2s,transform .2s;min-height:44px}
 .btn-primary{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
 .btn-primary:hover{background:transparent;color:var(--accent)}
 .btn-ghost:hover{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
 .btn-row{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.75rem}
 
-/* ===== Sections ===== */
+/* Sections  */
 .section{padding:6rem 0}
 .section.alt{background:var(--alt)}
 .section-head{margin-bottom:2.75rem;max-width:560px}
@@ -59,7 +59,7 @@ svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.7;stroke
 .section-head p{color:var(--muted);margin:.5rem 0 0}
 .section-head.sub{margin-top:5rem}
 
-/* ===== Hero ===== */
+/*  Hero  */
 .hero{min-height:100vh;display:flex;align-items:center;padding:calc(var(--nav-h) + 2rem) 0 4rem;overflow:hidden}
 .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:4rem;align-items:center}
 .greeting{color:var(--accent);font-weight:500;margin-bottom:.5rem}
@@ -75,7 +75,7 @@ svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.7;stroke
 .hero-photo{animation-delay:.2s}
 @keyframes enter{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
 
-/* ===== About ===== */
+/*  About  */
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start}
 .info-list{display:grid;gap:.75rem}
 .info{display:flex;gap:1rem;align-items:center;padding:1rem 1.25rem;background:var(--card);border:1px solid var(--line);border-radius:var(--radius)}
@@ -84,7 +84,7 @@ svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.7;stroke
 .info strong{font-weight:500}
 .about-text{font-size:1.05rem;color:var(--muted)}
 
-/* ===== Cards ===== */
+
 .card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
 .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:1.75rem;transition:transform .25s,border-color .25s}
 .card:hover{transform:translateY(-4px);border-color:var(--accent)}
@@ -92,7 +92,7 @@ svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.7;stroke
 .card h3{font-size:1.25rem;margin-bottom:.5rem}
 .card p{color:var(--muted);margin:0;font-size:.95rem}
 
-/* ===== Hobbies ===== */
+/*  Hobbi */
 .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
 .hobby{margin:0}
 .hobby-btn{display:block;width:100%;padding:0;border:0;background:var(--card);border-radius:var(--radius);overflow:hidden;cursor:zoom-in;aspect-ratio:4/5}
@@ -102,7 +102,7 @@ svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.7;stroke
 .hobby-info h3{font-size:1.25rem}
 .hobby-info p{color:var(--muted);margin:.25rem 0 0;font-size:.95rem}
 
-/* ===== Timeline (IT Journey) ===== */
+/* IT journey */
 .timeline{position:relative;max-width:720px;margin-left:1rem}
 .timeline::before{content:"";position:absolute;left:19px;top:0;bottom:0;width:2px;background:var(--line)}
 .timeline li{position:relative;padding:0 0 2.5rem 4rem}
@@ -114,7 +114,7 @@ svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.7;stroke
 .tags{display:flex;flex-wrap:wrap;gap:.4rem}
 .tags span{font-size:.8rem;padding:.2rem .65rem;border:1px solid var(--line);background:var(--card);border-radius:99px}
 
-/* ===== Skills ===== */
+/*  Skills  */
 .filters{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:2rem}
 .chip{font:inherit;font-size:.9rem;padding:.55rem 1.1rem;min-height:44px;border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:99px;cursor:pointer;transition:all .2s}
 .chip:hover{border-color:var(--accent)}
@@ -125,7 +125,7 @@ svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.7;stroke
 .skill-list em{font-style:normal;font-size:.8rem;color:var(--accent)}
 .skill-list li.dim{opacity:.22}
 
-/* ===== Goals ===== */
+/*  Goals  */
 .goals{background:var(--card);border-block:1px solid var(--line)}
 .goal-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem}
 .goal{padding:1.5rem;border-top:3px solid var(--accent);background:rgba(255,255,255,.04);border-radius:0 0 var(--radius) var(--radius);position:relative}
@@ -133,7 +133,7 @@ svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.7;stroke
 .goal p{margin:0;color:var(--muted)}
 .goal:not(:last-child)::after{content:"";position:absolute;right:-1.25rem;top:1.9rem;width:1.25rem;height:2px;background:var(--accent)}
 
-/* ===== Roadmap ===== */
+/*  Roadmap  */
 .roadmap{display:grid;grid-template-columns:repeat(6,1fr);gap:1rem;position:relative}
 .roadmap li{position:relative;padding-top:3.5rem}
 .roadmap li::before{content:"";position:absolute;top:19px;left:40px;right:-1rem;height:2px;background:var(--line)}
